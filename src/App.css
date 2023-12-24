@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.homepage{
+  padding: 80px 16px 0px 16px;
+}
+
+.form{
+  border-radius: 15px;
+}
+
+.form-div{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
+}
+
+.mt-20{
+  margin-top: 20px;
+  text-align: center;
+}
+.mb-20{
+  margin-bottom: 20px;
+}
+.Home{
+  padding: 20px;
+}
+
+.mt-30{
+  margin-top: 30px;
+}

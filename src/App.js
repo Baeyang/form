@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { useFormik } from 'formik';
+import { Button, TextField, Typography } from '@mui/material';
+import * as Yup from 'yup';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './Page/login';
+import UserProvider from './Context/context';
+import Home from './Page/home';
+import Private from './Page/privateroute';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <UserProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='login' element={<Login/>}></Route>
+          <Route element={<Private/>}>
+            <Route path='Home' element={<Home/>}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </UserProvider>
+    </>
+  )
 }
 
 export default App;
