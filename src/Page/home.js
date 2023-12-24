@@ -51,7 +51,7 @@ function Home() {
                 </div>
                 <Stepper className="" activeStep={activeStep} orientation="vertical">
                     {steps.map((step, index) => (
-                        <Step sx={{height: '100px'}} key={step.label}>
+                        <Step key={step.label}>
                             <StepLabel
                                 optional={
                                     index === 3 ? (
@@ -86,7 +86,7 @@ function Home() {
                     ))}
                 </Stepper>
                 {activeStep === steps.length && (
-                    <Paper square elevation={0} sx={{ p: 1 }}>
+                    <Paper square elevation={0} sx={{ p: 3 }}>
                         <div>Bạn đã hoàn thành tất cả các chặng, Xin cảm ơn !</div>
                     </Paper>
                 )}
